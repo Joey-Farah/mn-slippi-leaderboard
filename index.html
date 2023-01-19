@@ -359,7 +359,7 @@
       s.replaceAll('_', ' ').split(' ').map(w => w.charAt(0) + w.slice(1).toLowerCase()).join(' ').replace('Game And Watch', 'Mr. Game & Watch').replace('Dr', 'Dr.')
     );
     const now = Math.floor(Date.now() / 1000);
-    fetch(`/mn-slippi-leaderboard/data.json?now=${now}`)
+    fetch(`/data.json?now=${now}`)
       .then(res => res.json())
       .then(({ data, updatedAt }) => {
         const minutesAgo = Math.floor((now - updatedAt) / 60);
