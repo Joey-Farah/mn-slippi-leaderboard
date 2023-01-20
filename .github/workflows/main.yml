@@ -1,0 +1,20 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Run syncCodes script
+        run: sh ./syncCodes.sh
+        shell: bash
+      - name: Run updater script
+        run: sh ./updater.sh
+        shell: bash
