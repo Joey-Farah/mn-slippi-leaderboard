@@ -19,7 +19,6 @@ query AccountManagementPageQuery($cc: String!) {
         dailyRegionalPlacement
         continent
         characters {
-          id
           character
           gameCount
         }
